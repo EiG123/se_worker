@@ -3,4 +3,4 @@ from app import app
 
 @app.route('/')
 def home():
-    return "hello world!"
+    return "Bank says :'Hello World!'"
