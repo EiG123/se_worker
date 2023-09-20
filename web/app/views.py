@@ -1,10 +1,7 @@
 from flask import jsonify
+import json
+import os
 from app import app
-from pymongo import MongoClient
-
-# Connect to MongoDB
-client = MongoClient('mongodb://username:password@localhost:27017/')
-db = client['hello_mongo_dev']  # Replace with your MongoDB database name
 
 @app.route('/')
 def home():
@@ -12,9 +9,17 @@ def home():
 
 @app.route('/db/')
 def db_connection():
+    # Define the path to check.student.json
+    json_file_path = os.path.join(app.root_path, 'model', 'check.student.json')
+
+    # Read the JSON data from check.student.json
     try:
-        # Test if MongoDB is working by listing the collections in the database
-        collections = db.list_collection_names()
-        return f'<h1>Connected to MongoDB. Collections: {collections}</h1>'
-    except Exception as e:
-        return f'<h1>Failed to connect to MongoDB. Error: {str(e)}</h1>'
+        with open(json_file_path, 'r') as json_file:
+            data = json.load(json_file)
+
+        # Pretty-print the JSON for better readability
+        formatted_data = json.dumps(data, indent=4)
+
+        return "<pre>{}</pre>".format(formatted_data)
+    except FileNotFoundError:
+        return f'<h1>JSON file not found at {json_file_path}</h1>'
