@@ -49,9 +49,6 @@ def read_file(filename, mode="rt"):
     with open(filename, mode, encoding='utf-8') as fin:
         return fin.read()
 
-
-
-
 def write_file(filename, contents, mode="wt"):
     with open(filename, mode, encoding="utf-8") as fout:
         fout.write(contents)
@@ -75,3 +72,7 @@ def test_create():
             return redirect(url_for('test_comments'))
         
     return render_template('test_render_template/create.html')
+
+@app.route('/home')
+def homepage():
+    return app.send_static_file('home.html')
