@@ -1,0 +1,6 @@
+Flask==2.2.2
+gunicorn==20.1.0
+Flask-WTF==1.0.1
+Flask-SQLAlchemy==3.0.2
+psycopg2-binary==2.9.5
+SQLAlchemy-serializer==1.4.1
