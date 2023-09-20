@@ -1,0 +1,90 @@
+{% extends 'test_forms/base.html' %}
+
+
+{% block content %}
+    <h1>{% block title %} Add a New Course {% endblock %}</h1>
+
+
+    <form method="POST" action="/test_forms/">
+        {{ form.csrf_token }}
+        <p>
+            {{ form.title.label }}
+            {{ form.title(size=20) }}
+        </p>
+
+
+        {% if form.title.errors %}
+            <ul class="errors">
+                {% for error in form.title.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+
+        <p>
+            {{ form.description.label }}
+        </p>
+        {{ form.description(rows=10, cols=50) }}
+
+
+        {% if form.description.errors %}
+            <ul class="errors">
+                {% for error in form.description.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+
+        <p>
+            {{ form.price.label }}
+            {{ form.price() }}
+        </p>
+
+
+        {% if form.price.errors %}
+            <ul class="errors">
+                {% for error in form.price.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+
+        <p>
+            {{ form.available() }} {{ form.available.label }}
+        </p>
+
+
+        {% if form.available.errors %}
+            <ul class="errors">
+                {% for error in form.available.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+
+        <p>
+            {{ form.level.label }}
+            {{ form.level() }}
+        </p>
+
+
+        {% if form.level.errors %}
+            <ul class="errors">
+                {% for error in form.level.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+
+        <p>
+            <input type="submit" value="Add">
+        </p>
+    </form>
+
+
+{% endblock %}

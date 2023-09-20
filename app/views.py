@@ -3,6 +3,7 @@ from flask import (jsonify, render_template,
                    request, url_for, flash, redirect)
 import json
 from app import app
+from forms import forms
 
 
 @app.route('/')
@@ -76,3 +77,25 @@ def test_create():
 @app.route('/home')
 def homepage():
     return app.send_static_file('home.html')
+
+@app.route('/test_forms/', methods=('GET', 'POST'))
+def test_forms_index():
+    form = forms.CourseForm()
+    if form.validate_on_submit():
+        raw_json = read_file('data/course_list.json')
+        course_list = json.loads(raw_json)
+        course_list.append({'title': form.title.data,
+                            'description': form.description.data,
+                            'price': form.price.data,
+                            'available': form.available.data,
+                            'level': form.level.data
+                            })
+        write_file('data/course_list.json', json.dumps(course_list, indent=4))
+        return redirect(url_for('test_forms_courses'))
+    return render_template('test_forms/index.html', form=form)
+
+@app.route('/test_forms/courses/')
+def test_forms_courses():
+    raw_json = read_file('data/course_list.json')
+    course_list = json.loads(raw_json)
+    return render_template('test_forms/courses.html', course_list=course_list)
