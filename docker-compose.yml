@@ -6,7 +6,7 @@ services:
       context: ./web  # Path to the directory containing Dockerfile.web
       dockerfile: Dockerfile  # Dockerfile name
     ports:
-      - "27017:8000"
+      - "56733:8000"
     volumes:
       - ./web:/app
     env_file:
