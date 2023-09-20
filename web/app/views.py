@@ -1,21 +1,20 @@
-from flask import (jsonify, render_template,
-                   request, url_for, flash, redirect)
-import json
-from sqlalchemy.sql import text
+from flask import jsonify
 from app import app
-from app import db
+from pymongo import MongoClient
 
+# Connect to MongoDB
+client = MongoClient('mongodb://username:password@localhost:27017/')
+db = client['hello_mongo_dev']  # Replace with your MongoDB database name
 
 @app.route('/')
 def home():
-    return "Bank says :'Hello World!'"
+    return "Bank says: 'Hello World!'"
 
-@app.route('/db')
+@app.route('/db/')
 def db_connection():
     try:
-        with db.engine.connect() as conn:
-            conn.execute(text("SELECT 1"))
-        return '<h1>db works.</h1>'
+        # Test if MongoDB is working by listing the collections in the database
+        collections = db.list_collection_names()
+        return f'<h1>Connected to MongoDB. Collections: {collections}</h1>'
     except Exception as e:
-        return '<h1>db is broken.</h1>' + str(e)
-
+        return f'<h1>Failed to connect to MongoDB. Error: {str(e)}</h1>'

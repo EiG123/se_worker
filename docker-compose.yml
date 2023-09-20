@@ -2,9 +2,11 @@ version: "3.9"
 name: "flaskApp1"
 services:
   web:
-    build: web
+    build:
+      context: ./web  # Path to the directory containing Dockerfile.web
+      dockerfile: Dockerfile  # Dockerfile name
     ports:
-      - "56733:8000"
+      - "27017:8000"
     volumes:
       - ./web:/app
     env_file:
@@ -18,18 +20,19 @@ services:
         reservations:
           memory: 256M
   db:
-    image: postgres:13-alpine
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
+    image: mongo:latest  # Use the official MongoDB image
     environment:
-      - POSTGRES_USER=hello_flask
-      - POSTGRES_PASSWORD=hello_flask
-      - POSTGRES_DB=hello_flask_dev
+      - MONGO_INITDB_ROOT_USERNAME=hello_mongo
+      - MONGO_INITDB_ROOT_PASSWORD=hello_mongo
+      - MONGO_DB=hello_mongo_dev
+    volumes:
+      - mongodb_data:/data/db  # Mount a volume for MongoDB data
     deploy:
       resources:
         limits:
           memory: 512M
         reservations:
           memory: 256M
+
 volumes:
-  postgres_data:
+  mongodb_data:

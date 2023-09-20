@@ -1,36 +1,18 @@
-# pull official base image
-FROM python:3.10-alpine3.15
+FROM python:3.10
 
-
-# This prevents Python from writing out pyc files
-ENV PYTHONDONTWRITEBYTECODE 1
-
-
-# This keeps Python from buffering stdin/stdout
-ENV PYTHONUNBUFFERED 1
-
-
-# set work directory
 WORKDIR /app
 
+# Copy the requirements file into the container at /app
+COPY ./requirements.txt /app/
 
-# update the system and add git
-RUN apk update
-RUN apk add git
-
-
-# install dependencies
-COPY ./requirements.txt /app
-RUN --mount=type=cache,target=/root/.cache/pip \
-    pip3 install --upgrade pip
-RUN --mount=type=cache,target=/root/.cache/pip \
-    pip3 install -r requirements.txt
-
-
-# copy project
+# Install the dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install pymongo
+# Copy the application code into the container at /app
 COPY . /app
 
+# Set the environment variables
+ENV PORT=8000
 
-# specify the entry point
-RUN chmod 755 /app/gunicorn_starter.sh
-ENTRYPOINT [ "./gunicorn_starter.sh" ]
+# Command to run the application
+CMD ["gunicorn", "main:app", "--bind", "0.0.0.0:8000"]
