@@ -1,0 +1,232 @@
+body {
+    background-color: #334568;
+}
+
+.topnav {
+    background-color: #fecf2a;
+    margin: -0.5%;
+    height: 51px;
+}
+
+.topnav a {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #334568;
+    font-size: 20px;
+    float: left;
+    padding: 14px 16px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding-top: 0.5%;
+    margin-left: 3%;
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.plans {
+    position: absolute;
+    width: 301px;
+    padding-top: 2%;
+    left: 72%;
+    font-size: 25px;
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: normal;
+}
+
+.Bplan {
+    background-color: #fee386;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    position: absolute;
+    left: 88%;
+    top: 8%;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.Bplan:hover {
+    background-color: #ffc506;
+    color: #000000;
+}
+
+.gpa {
+    position: absolute;
+    width: 301px;
+    padding-top: 5%;
+    left: 72%;
+    font-size: 25px;
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: normal;
+}
+
+.study {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.study .y1 {
+    left: 17%;
+    top: 27%;
+    position: absolute;
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.study .y2 {
+    left: 57%;
+    top: 27%;
+    position: absolute;
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.study .y3 {
+    left: 17%;
+    top: 63%;
+    position: absolute;
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.study .y4 {
+    left: 57%;
+    top: 63%;
+    position: absolute;
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.study .y1 .board {
+    position: fixed;
+    width: 387px;
+    height: 229px;
+    left: 17%;
+    top: 31%;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.study .y2 .board {
+    position: fixed;
+    width: 387px;
+    height: 229px;
+    left: 57%;
+    top: 31%;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.study .y3 .board {
+    position: fixed;
+    width: 387px;
+    height: 229px;
+    left: 17%;
+    top: 67%;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.study .y4 .board {
+    position: fixed;
+    width: 387px;
+    height: 229px;
+    left: 57%;
+    top: 67%;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.study .y1 .edit {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    width: 50px;
+    height: 30px;
+    background-color: #fc6f59;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.study .y1 .edit:hover {
+    background-color: #f89393;
+    color: #000000;
+}
+
+.study .y2 .edit {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    width: 50px;
+    height: 30px;
+    background-color: #fc6f59;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.study .y2 .edit:hover {
+    background-color: #f89393;
+    color: #000000;
+}
+
+.study .y3 .edit {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    width: 50px;
+    height: 30px;
+    background-color: #fc6f59;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.study .y3 .edit:hover {
+    background-color: #f89393;
+    color: #000000;
+}
+
+.study .y4 .edit {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    width: 50px;
+    height: 30px;
+    background-color: #fc6f59;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.study .y4 .edit:hover {
+    background-color: #f89393;
+    color: #000000;
+}

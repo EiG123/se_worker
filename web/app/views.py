@@ -23,3 +23,24 @@ def db_connection():
         return "<pre>{}</pre>".format(formatted_data)
     except FileNotFoundError:
         return f'<h1>JSON file not found at {json_file_path}</h1>'
+
+@app.route('/home')
+def homepage():
+    return app.send_static_file('home.html')
+
+@app.route('/overview')
+def overview():
+    return app.send_static_file('overview.html')
+
+@app.route('/teacher_home')
+def t_home():
+    return app.send_static_file('t_home.html')
+
+@app.route('/subject_credit')
+def s_credit():
+    return app.send_static_file('sj_credit.html')
+
+@app.route('/subject_add')
+def s_add():
+    return app.send_static_file('subject_add.html')
+

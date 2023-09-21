@@ -1,0 +1,384 @@
+body {
+    background-color: #ffffff;
+}
+
+.topnav {
+    background-color: #fecf2a;
+    margin: -0.5%;
+    height: 51px;
+}
+
+.topnav a {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #334568;
+    font-size: 20px;
+    float: left;
+    padding: 14px 16px;
+}
+
+.topic {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 28%;
+}
+
+.new {
+    width: 80px;
+    height: 45px;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #47bc7d;
+    border-radius: 20px;
+    margin-left: 20%;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.new:hover {
+    background-color: #205538;
+    color: #ffffff;
+}
+
+.del {
+    width: 90px;
+    height: 45px;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #f25e5e;
+    border-radius: 20px;
+    margin-left: 1%;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.del:hover {
+    background-color: #8f2828;
+    color: #ffffff;
+}
+
+.area1 {
+    width: 1280px;
+    height: 626px;
+    margin-top: 1%;
+    margin-left: 7.5%;
+    background-color: #bbcff7;
+    border-radius: 50px;
+}
+
+.text1 {
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    padding-top: 2%;
+    margin-left: 7%;
+}
+
+.yearbox {
+    width: 45px;
+    height: 35px;
+    margin-left: 22%;
+    margin-top: -2.2%;
+    background-color: #ffffff;
+}
+
+.text2 {
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    margin-top: -2.5%;
+    margin-left: 34%;
+}
+
+.cbox {
+    width: 170px;
+    height: 35px;
+    margin-left: 15%;
+    margin-top: -3.5%;
+    background-color: #ffffff;
+}
+
+.text3 {
+    font-family: "Inter", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    margin-top: -2.5%;
+    margin-left: 70%;
+}
+
+.creditbox {
+    width: 90px;
+    height: 35px;
+    margin-left: 52%;
+    margin-top: -6.7%;
+    background-color: #ffffff;
+}
+
+.topic2 {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 30px;
+    padding-top: 1.5%;
+    margin-left: 7%;
+}
+
+.area2 {
+    position: absolute;
+    width: 1190px;
+    height: 470px;
+    top: 35%;
+    left: 11%;
+    background-color: #91ace0;
+    border-radius: 50px;
+}
+
+.choose {
+    position: absolute;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    font-size: 20px;
+    width: 90px;
+    height: 50px;
+    top: 28%;
+    left: 35%;
+    background-color: #3865bd;
+    color: #ffffff;
+    border-radius: 15px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.choose:hover {
+    background-color: #739ff7;
+    color: #000000;
+}
+
+.add {
+    position: absolute;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    top: 29%;
+    left: 53.5%;
+    background-color: #3865bd;
+    color: #ffffff;
+    border-radius: 15px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.add:hover {
+    background-color: #739ff7;
+    color: #000000;
+}
+
+.import {
+    position: absolute;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    font-size: 20px;
+    width: 90px;
+    height: 50px;
+    top: 28%;
+    left: 64.5%;
+    background-color: #205538;
+    color: #ffffff;
+    border-radius: 15px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.import:hover {
+    background-color: #47bc7d;
+    color: #000000;
+}
+
+.chtopic {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    top: 0%;
+    margin-left: 14%;
+}
+
+.addtopic {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    top: 0%;
+    margin-left: 6.5%;
+}
+
+.imptopic {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    top: 0%;
+    margin-left: 12%;
+}
+
+.topic3 {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 25px;
+    padding-top: 1.5%;
+    margin-left: 4%;
+}
+
+.rec {
+    position: absolute;
+    width: 197px;
+    height: 34px;
+    top: 3.5%;
+    left: 341px;
+    background-color: #d1ebff;
+}
+
+.total {
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    top: 4%;
+    margin-left: 4%;
+}
+
+.group {
+    font-family: "Inter", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 23px;
+    padding-top: 1.5%;
+    margin-left: 4%;
+}
+
+.recg {
+    position: absolute;
+    width: 225px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    top: 13%;
+    left: 6%;
+}
+
+.reccr {
+    position: absolute;
+    width: 140px;
+    height: 34px;
+    top: 3.5%;
+    left: 106%;
+    background-color: #ffebaa;
+}
+
+.crs {
+    position: absolute;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 18px;
+    top: 20%;
+    left: 4%;
+}
+
+.recg1 {
+    position: absolute;
+    width: 435px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    top: 130%;
+    left: 10%;
+}
+
+.g1 {
+    font-family: "Inter", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 20px;
+    padding-top: 1%;
+    margin-left: 4%;
+    float: left;
+}
+
+.reccr1 {
+    position: absolute;
+    width: 140px;
+    height: 34px;
+    top: 3.5%;
+    left: 103%;
+    background-color: #ffebaa;
+}
+
+.crs1 {
+    position: absolute;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 18px;
+    top: 20%;
+    left: 4%;
+}
+
+.edit {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    top: -65%;
+    margin-left: 120%;
+    background-color: #50a9f8;
+    border-radius: 100px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.delete {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    top: -65%;
+    margin-left: 200%;
+    background-color: #f87777;
+    border-radius: 100px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.save {
+    position: absolute;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    font-size: 20px;
+    width: 90px;
+    height: 50px;
+    top: 87%;
+    left: 89%;
+    background-color: #5088f8;
+    color: #000000;
+    border-radius: 15px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.save:hover {
+    background-color: #30559d;
+    color: #ffffff;
+}
