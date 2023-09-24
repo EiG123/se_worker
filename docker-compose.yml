@@ -1,5 +1,5 @@
 version: "3.9"
-name: "flaskApp1"
+name: "check-grade"
 services:
   web:
     build:

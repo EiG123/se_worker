@@ -1,4 +1,4 @@
-from flask import jsonify
+from flask import (jsonify,render_template)
 import json
 import os
 from app import app
@@ -23,6 +23,14 @@ def db_connection():
         return "<pre>{}</pre>".format(formatted_data)
     except FileNotFoundError:
         return f'<h1>JSON file not found at {json_file_path}</h1>'
+    
+@app.route('/login')
+def login():
+    return render_template('inout/login.html')
+
+@app.route('/signup')
+def signup():
+    return render_template('inout/register.html')
 
 @app.route('/home')
 def homepage():
