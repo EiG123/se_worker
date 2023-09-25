@@ -3,8 +3,8 @@ name: "check-grade"
 services:
   web:
     build:
-      context: ./web  # Path to the directory containing Dockerfile.web
-      dockerfile: Dockerfile  # Dockerfile name
+      context: ./web
+      dockerfile: Dockerfile
     ports:
       - "56733:8000"
     volumes:
@@ -20,13 +20,13 @@ services:
         reservations:
           memory: 256M
   db:
-    image: mongo:latest  # Use the official MongoDB image
+    image: mongo:latest
     environment:
       - MONGO_INITDB_ROOT_USERNAME=hello_mongo
       - MONGO_INITDB_ROOT_PASSWORD=hello_mongo
       - MONGO_DB=hello_mongo_dev
     volumes:
-      - mongodb_data:/data/db  # Mount a volume for MongoDB data
+      - mongodb_data:/data/db
     deploy:
       resources:
         limits:

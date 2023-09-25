@@ -8,6 +8,7 @@ COPY ./requirements.txt /app/
 # Install the dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install pymongo
+RUN pip install Flask-PyMongo
 # Copy the application code into the container at /app
 COPY . /app
 
